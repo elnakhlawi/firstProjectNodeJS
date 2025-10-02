@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Show all posts</title>
+  </head>
+  <body>
+    <h1 style="background-color: blue; text-align: center; color: white">
+      Show all posts
+    </h1>
+
+    <div
+      style="
+        width: 90%;
+        height: 80vh;
+        background-color: rgba(128, 128, 128, 0.555);
+        border-radius: 10px;
+        padding: 10px;
+        margin: auto;
+      "
+    >
+      <% for(let post of allPosts){ %>
+
+      <div
+        style="
+          background-color: black;
+          color: white;
+          padding: 10px;
+          margin: 5px;
+          text-align: center;
+          border-radius: 5px;
+        "
+      >
+        <h1><%=post.name%></h1>
+        <h3><%=post.tile%></h3>
+        <p><%=post.content%></p>
+        <span><%=post.date%></span>
+      </div>
+
+      <% } %>
+    </div>
+  </body>
+</html>

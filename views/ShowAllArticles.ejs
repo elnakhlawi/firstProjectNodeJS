@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Show all articles</title>
+  </head>
+  <body>
+    <h1 style="background-color: blue; text-align: center; color: white">
+      All articles are here.
+    </h1>
+    <div
+      style="
+        width: 80%;
+        background-color: rgba(128, 128, 128, 0.44);
+        height: 90vh;
+        margin: auto;
+        border-radius: 10px;
+        padding: 10px;
+      "
+    >
+      <% for(let article of allArticles){ %>
+
+      <div
+        style="
+          background-color: black;
+          color: white;
+          padding: 10px;
+          margin: 5px;
+          text-align: center;
+          border-radius: 5px;
+        "
+      >
+        <h1><%= article.title %></h1>
+        <p><%= article.content%></p>
+        <span><%=article.numberLikes%></span>
+      </div>
+
+      <% } %>
+    </div>
+  </body>
+</html>

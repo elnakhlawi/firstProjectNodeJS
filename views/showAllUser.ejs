@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Show All User</title>
+  </head>
+  <body>
+    <h1 style="background-color: blue; text-align: center; color: white">
+      Show All Users
+    </h1>
+
+    <div
+      style="
+        width: 90%;
+        height: 80vh;
+        background-color: rgba(128, 128, 128, 0.555);
+        border-radius: 10px;
+        padding: 10px;
+        margin: auto;
+      "
+    >
+      <% for(let user of allUsers){ %>
+      <div
+        style="
+          background-color: black;
+          color: white;
+          padding: 10px;
+          margin: 5px;
+          text-align: center;
+          border-radius: 5px;
+        "
+      >
+        <h1><%=user.name%></h1>
+        <span><%=user.password%></span>
+        <span><%=user.age%></span>
+      </div>
+
+      <%}%>
+    </div>
+  </body>
+</html>

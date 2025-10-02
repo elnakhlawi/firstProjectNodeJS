@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Show all images</title>
+  </head>
+  <body>
+    <h1 style="background-color: blue; text-align: center; color: white">
+      Show all images
+    </h1>
+
+    <div
+      style="
+        width: 90%;
+        height: 80vh;
+        background-color: rgba(128, 128, 128, 0.555);
+        border-radius: 10px;
+        padding: 10px;
+        margin: auto;
+      "
+    >
+      <% for(let image of allImages){ %>
+
+      <div
+        style="
+          background-color: black;
+          color: white;
+          padding: 10px;
+          margin: 5px;
+          text-align: center;
+          border-radius: 5px;
+        "
+      >
+        <h1><%=image.title%></h1>
+        <p><%=image.date%></p>
+        <img
+          src="<%=image.url%>"
+          alt="image"
+          style="max-width: 200px; height: auto"
+        />
+      </div>
+
+      <%}%>
+    </div>
+  </body>
+</html>
